@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
+@import "./styles/index.css";
+
+body {
+  margin: 0px;
+  background-color: var(--black);
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  /* TO DO */
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
