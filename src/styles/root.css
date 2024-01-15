@@ -5,6 +5,7 @@
   --pink-swan-color: #b5b5b5;
   --charcoal-color: #444;
   --light-slate-blue: #7e5eff;
+  --dark-slate-blue: #483888;
   --transition: all, cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   --white-opacity-05: rgba(255, 255, 255, 0.5);
 }
