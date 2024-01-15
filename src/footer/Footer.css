@@ -1,0 +1,129 @@
+.footer {
+  position: relative;
+  overflow-y: visible;
+  overflow-x: clip;
+}
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+
+  justify-content: center;
+}
+
+.footer-list-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-list-link:hover {
+  opacity: 0.5;
+}
+
+.pseudo-element-myProjects-circle {
+  background-color: var(--dark-slate-blue);
+  position: absolute;
+}
+
+@media screen and (max-width: 719px) {
+  .footer {
+    padding-top: 40px;
+  }
+  .pseudo-element-myProjects-circle {
+    width: 250px;
+    height: 250px;
+    filter: blur(139.75px);
+    right: -52px;
+    bottom: -4px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .footer {
+    padding-top: 16px;
+  }
+  .pseudo-element-myProjects-circle {
+    width: 352px;
+    height: 352px;
+    filter: blur(269.75px);
+    right: -6px;
+    bottom: -12px;
+    border-radius: 352px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer-divider {
+    display: none;
+  }
+
+  .footer-list {
+    padding: 48px 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .footer {
+    padding-top: 72px;
+  }
+
+  .footer-list {
+    padding: 36px 0px;
+  }
+
+  hr.footer-divider {
+    border-width: 1px;
+  }
+  .pseudo-element-myProjects-circle {
+    width: 241px;
+    height: 241px;
+    border-radius: 298px;
+    filter: blur(222.25px);
+    right: -7px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .footer-list {
+    gap: 20px;
+  }
+  .footer-list-link {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .footer {
+    padding-top: 168px;
+  }
+
+  hr.footer-divider {
+    border-width: 2px;
+  }
+  .footer-list {
+    padding: 64px 0px;
+    gap: 40px;
+  }
+  .footer-list-link {
+    width: 62px;
+    height: 62px;
+  }
+  .pseudo-element-myProjects-circle {
+    right: 44px;
+    bottom: 29px;
+    width: 428px;
+    height: 428px;
+    border-radius: 428px;
+    filter: blur(374.75px);
+  }
+}
