@@ -1,31 +1,23 @@
 import React from "react";
-import Button from "../../components/button";
+import CollectivelyForm from "./CollectivelyForm";
+
+import "./Collectively.css";
 
 export default function Collectively() {
-  const onSubmit = (e: any) => {
-    e.preventDefault();
-  };
-
   return (
-    <article className="container" id={"collectively"}>
-      <h2>LET’S WORK TOGETHER</h2>
-      <form onSubmit={onSubmit}>
-        <label>
-          Your name
-          <input />
-        </label>
-        <label>
-          E-mail
-          <input />
-        </label>
-        <label>
-          Message
-          <textarea></textarea>
-        </label>
-        <Button className={""} type={"submit"}>
-          Send
-        </Button>
-      </form>
+    <article className="container collectively-section" id={"collectively"}>
+      <img
+        src={"/photo.jpg"}
+        alt={"Alex Semenenko"}
+        className={"collectively-section-img"}
+      />
+      <div>
+        <h2 className="collectively-section-header">
+          LET’S WORK
+          <span className="collectively-section-header-span"> TOGETHER</span>
+        </h2>
+        <CollectivelyForm />
+      </div>
     </article>
   );
 }

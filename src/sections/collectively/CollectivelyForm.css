@@ -1,0 +1,76 @@
+.collectively-section-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.collectively-section-submit-button.button {
+  display: inline-block;
+  max-width: max-content;
+}
+
+@media screen and (max-width: 719px) {
+  .collectively-section-submit-button.button {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .collectively-section-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collectively-section-textarea {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .collectively-section-submit-button.button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .collectively-section-textarea textarea {
+    height: 237px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .collectively-section-textarea textarea {
+    height: 155px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .collectively-section-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collectively-section-textarea {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .collectively-section-submit-button {
+    grid-column-start: 1;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .collectively-section-form {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .collectively-section-form {
+    gap: 32px;
+  }
+
+  .collectively-section-textarea textarea {
+    height: 228px;
+  }
+}
