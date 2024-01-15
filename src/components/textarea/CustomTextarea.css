@@ -1,0 +1,102 @@
+.custom-textarea-wrapper {
+  position: relative;
+}
+
+.custom-textarea-label {
+  transition: var(--transition);
+}
+
+.custom-textarea {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--charcoal-color);
+  color: var(--pink-swan-color);
+  padding: 16.5px 14px;
+  resize: none;
+
+  width: calc(100% - 28px);
+}
+
+.custom-textarea:focus {
+  outline: 0;
+}
+
+.custom-textarea-label {
+  display: inline-block;
+
+  position: absolute;
+  top: 16.5px;
+  left: 14px;
+
+  color: var(--pink-swan-color);
+  background-color: var(--jaguar-color);
+}
+
+.custom-textarea:hover,
+.custom-textarea:focus {
+  border: 1px solid var(--pink-swan-color);
+}
+
+/* error */
+
+.custom-textarea-wrapper-error .custom-textarea {
+  border-color: var(--persian-red-color);
+}
+.custom-textarea-wrapper-error .custom-textarea-label {
+  color: var(--persian-red-color);
+}
+
+.custom-textarea-wrapper-error .custom-textarea:focus,
+.custom-textarea-wrapper-error .custom-textarea:focus + .custom-textarea-label {
+  color: var(--pink-swan-color);
+}
+
+.custom-textarea-wrapper-error .custom-textarea:hover,
+.custom-textarea-wrapper-error .custom-textarea:focus {
+  border: 1px solid var(--pink-swan-color);
+}
+
+.custom-textarea-wrapper-default
+  .custom-textarea:focus
+  + .custom-textarea-label {
+  padding: 0 3px;
+}
+
+.custom-textarea-wrapper-content .custom-textarea-label {
+  padding: 0 3px;
+}
+
+/* media */
+
+@media screen and (max-width: 1919px) {
+  .custom-textarea,
+  .custom-textarea-label {
+    font-size: 18px;
+  }
+
+  .custom-textarea-wrapper-content .custom-textarea-label {
+    transform: translate(-14px, -25px) scale(0.75);
+  }
+
+  .custom-textarea-wrapper-default
+    .custom-textarea:focus
+    + .custom-textarea-label {
+    transform: translate(-14px, -25px) scale(0.75);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .custom-textarea,
+  .custom-textarea-label {
+    font-size: 28px;
+  }
+  .custom-textarea-wrapper-content .custom-textarea-label {
+    transform: translate(-14px, -25px) scale(0.75);
+  }
+
+  .custom-textarea-wrapper-default
+    .custom-textarea:focus
+    + .custom-textarea-label {
+    transform: translate(-14px, -25px) scale(0.75);
+  }
+}

@@ -1,0 +1,13 @@
+@media screen and (max-width: 1919px) {
+  .custom-input input,
+  .custom-input label {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .custom-input input,
+  .custom-input label {
+    font-size: 28px;
+  }
+}
