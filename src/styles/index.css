@@ -2,11 +2,10 @@
 @import "./root.css";
 @import "./container.css";
 /* ui */
-@import "./ui/button.css";
-@import "./ui/header.css";
-@import "./ui/footer.css";
+/* @import "./ui/header.css"; */
+/* @import "./ui/footer.css"; */
 /* sections */
-@import "./sections/hero.css";
-@import "./sections/advantages.css";
-@import "./sections/collectively.css";
-@import "./sections/myProjects.css";
+/* @import "./sections/hero.css"; */
+/* @import "./sections/advantages.css"; */
+/* @import "./sections/collectively.css"; */
+/* @import "./sections/myProjects.css"; */

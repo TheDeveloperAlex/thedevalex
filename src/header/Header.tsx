@@ -1,22 +1,29 @@
 import React from "react";
 
+import Avatar from "@mui/material/Avatar";
+import CustomButton from "../components/button";
+
+import "./Header.css";
+
 export default function Header() {
   return (
     <header className="container header-section">
       <div className="header-section-name-wrapper">
-        <div
-          style={{
-            width: "25px",
-            height: "25px",
-            background: "#D9D9D9",
-            borderRadius: "50%",
+        <Avatar
+          alt="Alex Semenenko"
+          // src="/static/images/avatar/1.jpg"
+          className="header-avatar"
+          sx={{
+            bgcolor: "purple",
           }}
-        />
-        <p className="name">Alexander Semenenko</p>
+        >
+          AS
+        </Avatar>
+        <p className="header-phone">+420-735-907-628</p>
       </div>
-      <a className="button header-section-button" href={"#collectively"}>
+      <CustomButton href="#collectively" className={"header-section-button"}>
         Contact me
-      </a>
+      </CustomButton>
     </header>
   );
 }
