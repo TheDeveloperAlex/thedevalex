@@ -5,24 +5,28 @@ export const projects: project[] = [
     header: "Donut master",
     content:
       "Responsive mobile-focused landing page to meet and attract customers to cooking donut master",
-    image: "",
+    image: "/donutMaster.png",
+    href: "https://thedeveloperalex.github.io/Donut-master/",
   },
   {
     header: "Shop from future",
     content:
       "Mobile-friendly web page with user authentication, profile management, product addition, and order confirmation.",
-    image: "",
+    image: "/shopFromFuture.png",
+    href: "https://thedeveloperalex.github.io/shop-from-future/",
   },
   {
     header: "Task manager",
     content:
       "Quit smoking app with authorization, profile creation, habit addition, and tracking",
-    image: "",
+    image: "/taskManager.png",
+    href: "https://thedeveloperalex-task-manager.netlify.app/login",
   },
   {
-    header: "Task manager",
+    header: "Task manager-1",
     content:
       "Quit smoking app with authorization, profile creation, habit addition, and tracking",
-    image: "",
+    image: "/taskManager.png",
+    href: "",
   },
 ];

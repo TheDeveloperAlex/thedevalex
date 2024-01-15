@@ -1,16 +1,18 @@
 import React from "react";
-import MyProject from "./MyProject";
-import { projects } from "./myProjects.data";
+
+import MyProjectList from "./MyProjectList";
+
+import "./MyProjects.css";
 
 export default function MyProjects() {
   return (
-    <article>
-      <h2>MY PROJECTS</h2>
-      <ul>
-        {projects.map((item) => {
-          return <MyProject key={item.header} {...item} />;
-        })}
-      </ul>
+    <article className="myProjects-section">
+      <div className="pseudo-element-myProjects-circle-top"></div>
+      <div className="myProjects-section-content">
+        <h2 className="myProjects-section-header">MY PROJECTS</h2>
+        <MyProjectList />
+      </div>
+      <div className="pseudo-element-myProjects-circle-bottom"></div>
     </article>
   );
 }

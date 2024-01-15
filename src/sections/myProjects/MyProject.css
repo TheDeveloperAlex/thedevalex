@@ -1,0 +1,191 @@
+.myProjects-section-list-item {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--charcoal-color);
+  background: linear-gradient(234deg, #302648 1.16%, rgba(42, 35, 60, 0) 100%);
+}
+
+.myProjects-section-list-item-img-wrapper {
+  position: relative;
+}
+
+.myProjects-section-list-item-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.myProjects-section-list-item-overlay {
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: var(--transition);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  color: #fff;
+  font-style: normal;
+  line-height: normal;
+}
+
+.myProjects-section-list-item-header,
+.myProjects-section-list-item-content {
+  color: var(--white-smoke-color);
+}
+
+.myProjects-section-list-item-header {
+  text-align: center;
+
+  font-weight: 700;
+}
+
+.myProjects-section-list-item-content {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.myProjects-section-list-item-button:hover
+  + p
+  + h3
+  + .myProjects-section-list-item-img-wrapper
+  > .myProjects-section-list-item-overlay,
+.myProjects-section-list-item-button:active
+  + p
+  + h3
+  + .myProjects-section-list-item-img-wrapper
+  > .myProjects-section-list-item-overlay {
+  opacity: 1;
+}
+
+button.myProjects-section-list-item-button,
+a.myProjects-section-list-item-button {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 719px) {
+  .myProjects-section-list-item {
+    padding: 12px 12px 24px 12px;
+    margin: 0 20px;
+  }
+  .myProjects-section-list-item-img-wrapper {
+    margin-bottom: 36px;
+  }
+  .myProjects-section-list-item-overlay {
+    font-size: 24px;
+  }
+  .myProjects-section-list-item-header {
+    font-size: 28px;
+  }
+  .myProjects-section-list-item-content {
+    padding: 0 12px;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .myProjects-section-list-item {
+    padding: 12px 12px 32px 12px;
+    margin: 0 88px;
+  }
+  .myProjects-section-list-item-img-wrapper {
+    margin-bottom: 32px;
+  }
+  .myProjects-section-list-item-overlay {
+    font-size: 28px;
+  }
+  .myProjects-section-list-item-header {
+    font-size: 32px;
+  }
+  .myProjects-section-list-item-content {
+    padding: 0 30px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .myProjects-section-list-item {
+    height: 552px;
+    padding: 20px 20px 24px 20px;
+  }
+
+  .myProjects-section-list-item:nth-child(2) {
+    margin-top: 215px;
+  }
+
+  .myProjects-section-list-item:not(:nth-child(2n), :first-child) {
+    margin-top: -215px;
+  }
+  .myProjects-section-list-item-overlay {
+    font-size: 24px;
+  }
+  .myProjects-section-list-item-header {
+    font-size: 28px;
+  }
+  .myProjects-section-list-item-img-wrapper {
+    margin-bottom: 24px;
+  }
+  .myProjects-section-list-item-content {
+    margin-bottom: 24px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .myProjects-section-list-item-header {
+    margin-bottom: 12px;
+  }
+  .myProjects-section-list-item-content {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  .myProjects-section-list-item {
+    height: 630px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .myProjects-section-list-item {
+    padding: 32px 32px 44px 32px;
+    height: 700px;
+  }
+
+  .myProjects-section-list-item:nth-child(2) {
+    margin-top: 285px;
+  }
+
+  .myProjects-section-list-item:not(:nth-child(2n), :first-child) {
+    margin-top: -285px;
+  }
+
+  .myProjects-section-list-item-img-wrapper {
+    margin-bottom: 44px;
+  }
+  .myProjects-section-list-item-overlay {
+    font-size: 40px;
+  }
+  .myProjects-section-list-item-header {
+    font-size: 44px;
+
+    margin-bottom: 16px;
+  }
+
+  .myProjects-section-list-item-content {
+    font-size: 28px;
+    margin-bottom: 44px;
+  }
+}

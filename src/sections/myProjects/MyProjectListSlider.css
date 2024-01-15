@@ -1,0 +1,40 @@
+.myProjects-section-list-slider-dots-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.myProjects-section-list-slider-dots-list-item {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--white-opacity-05);
+}
+
+.myProjects-section-list-slider-dots-list > li {
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+}
+
+.slick-active > .myProjects-section-list-slider-dots-list-item {
+  background-color: white;
+}

@@ -1,0 +1,159 @@
+/* css */
+
+.myProjects-section {
+  position: relative;
+  overflow-y: visible;
+  overflow-x: clip;
+}
+
+.myProjects-section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.myProjects-section-header {
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.myProjects-section-header {
+  background: linear-gradient(
+    186deg,
+    rgba(250, 250, 250, 0.95) 29.09%,
+    rgba(217, 217, 217, 0.6) 93.05%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pseudo-element-myProjects-circle-top,
+.pseudo-element-myProjects-circle-bottom {
+  background-color: var(--dark-slate-blue);
+  position: absolute;
+}
+
+@media screen and (max-width: 719px) {
+  .myProjects-section {
+    padding-top: 108px;
+  }
+
+  .myProjects-section-header {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+  .pseudo-element-myProjects-circle-top {
+    top: -37px;
+    right: -113px;
+    width: 266px;
+    height: 266px;
+    border-radius: 266px;
+    filter: blur(134.75px);
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .myProjects-section {
+    padding-top: 64px;
+  }
+
+  .myProjects-section-header {
+    margin-bottom: 32px;
+  }
+  .pseudo-element-myProjects-circle-top {
+    top: -78px;
+    right: -54px;
+    width: 403px;
+    height: 403px;
+
+    border-radius: 403px;
+    filter: blur(269.75px);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .pseudo-element-myProjects-circle-bottom {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .myProjects-section {
+    padding-top: 112px;
+  }
+  .myProjects-section-header {
+    margin-bottom: 64px;
+  }
+
+  .myProjects-section-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 60px;
+  }
+
+  .pseudo-element-myProjects-circle-top {
+    top: 62px;
+    right: -37px;
+    width: 403px;
+    height: 403px;
+
+    border-radius: 403px;
+    filter: blur(269.75px);
+  }
+
+  .pseudo-element-myProjects-circle-bottom {
+    bottom: -119px;
+    left: -130px;
+    width: 440px;
+    height: 440px;
+    border-radius: 440px;
+    filter: blur(277.25px);
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1919px) {
+  .myProjects-section-header {
+    font-size: 54px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .myProjects-section {
+    padding-top: 168px;
+  }
+
+  .myProjects-section-header {
+    font-size: 84px;
+  }
+
+  .myProjects-section-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+    row-gap: 48px;
+  }
+
+  .pseudo-element-myProjects-circle-top {
+    top: 112px;
+    right: 50%;
+    transform: translateX(calc(50% + 779px));
+    width: 626px;
+    height: 626px;
+
+    border-radius: 626px;
+    filter: blur(374.75px);
+  }
+
+  .pseudo-element-myProjects-circle-bottom {
+    bottom: -341px;
+    left: 50%;
+    transform: translateX(calc(-50% - 716px));
+    width: 626px;
+    height: 626px;
+    border-radius: 626px;
+    filter: blur(374.75px);
+  }
+}
