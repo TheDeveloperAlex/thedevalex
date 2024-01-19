@@ -1,0 +1,63 @@
+@media screen and (max-width: 719px) {
+  .advantages-list-item-teamwork {
+    background: linear-gradient(
+      161deg,
+      rgba(48, 38, 72, 0) 38.22%,
+      rgba(48, 38, 72, 0.8) 111.88%
+    );
+    box-shadow: 2px 9px 21px 0px rgba(0, 0, 0, 0.1),
+      7px 37px 38px 0px rgba(0, 0, 0, 0.09),
+      16px 84px 51px 0px rgba(0, 0, 0, 0.05),
+      28px 149px 61px 0px rgba(0, 0, 0, 0.01),
+      43px 232px 66px 0px rgba(0, 0, 0, 0);
+  }
+
+  .advantages-list-item-content-teamwork {
+    max-width: 273px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .advantages-list-item-teamwork {
+    background: linear-gradient(
+      161deg,
+      rgba(48, 38, 72, 0) 38.22%,
+      rgba(48, 38, 72, 0.8) 111.88%
+    );
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1279px) {
+  .advantages-list-item-content-teamwork {
+    max-width: 302px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .advantages-list-item-content-teamwork {
+    max-width: 302px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .advantages-list-item-teamwork {
+    background: linear-gradient(
+      161deg,
+      rgba(48, 38, 72, 0) 38.22%,
+      rgba(48, 38, 72, 0.8) 111.88%
+    );
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .advantages-list-item-teamwork {
+    background: linear-gradient(
+      161deg,
+      rgba(48, 38, 72, 0) 38.22%,
+      rgba(48, 38, 72, 0.8) 111.88%
+    );
+  }
+  .advantages-list-item-content-teamwork {
+    max-width: 484px;
+  }
+}

@@ -1,6 +1,8 @@
 .collectively-section {
   position: relative;
   z-index: 1;
+  overflow-y: visible;
+  overflow-x: clip;
 }
 
 .collectively-section-header {
@@ -85,6 +87,9 @@
   .collectively-section {
     display: grid;
     align-items: center;
+  }
+  .collectively-section-img {
+    grid-column-start: 1;
   }
 }
 

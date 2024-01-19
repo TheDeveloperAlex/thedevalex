@@ -2,6 +2,8 @@ import React from "react";
 
 import { IconLanguages } from "../../components/icons";
 
+import "./Languages.css";
+
 export default function Languages() {
   return (
     <li className="advantages-list-item advantages-list-item-languages">

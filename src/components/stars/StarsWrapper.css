@@ -1,0 +1,43 @@
+/* mobile */
+
+@media screen and (min-width: 720px) {
+  .stars-wrapper-mobile {
+    display: none;
+  }
+}
+
+/* tablet */
+
+@media screen and (max-width: 719px) {
+  .stars-wrapper-tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .stars-wrapper-tablet {
+    display: none;
+  }
+}
+
+/* desktop */
+
+@media screen and (max-width: 1023px) {
+  .stars-wrapper-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .stars-wrapper-desktop {
+    display: none;
+  }
+}
+
+/* monitor */
+
+@media screen and (max-width: 1919px) {
+  .stars-wrapper-monitor {
+    display: none;
+  }
+}

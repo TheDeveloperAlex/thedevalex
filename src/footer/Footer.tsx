@@ -1,13 +1,27 @@
 import React from "react";
 
-import Divider from "@mui/material/Divider";
 import { socials } from "./footer.data";
+import {
+  starFooterDesktop,
+  starFooterMobile,
+  starFooterMonitor,
+  starFooterTablet,
+} from "./footerStars.data";
+
+import Divider from "@mui/material/Divider";
+import StarsWrapper from "../components/stars";
 
 import "./Footer.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
+      <StarsWrapper
+        mobile={starFooterMobile}
+        tablet={starFooterTablet}
+        desktop={starFooterDesktop}
+        monitor={starFooterMonitor}
+      />
       <div className="footer-content">
         <Divider
           orientation="horizontal"

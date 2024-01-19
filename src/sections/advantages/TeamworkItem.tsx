@@ -1,6 +1,8 @@
 import React from "react";
 import { IconTeamwork } from "../../components/icons";
 
+import "./TeamworkItem.css";
+
 export default function TeamworkItem() {
   return (
     <li className="advantages-list-item advantages-list-item-teamwork">

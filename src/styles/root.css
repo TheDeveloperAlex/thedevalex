@@ -8,4 +8,7 @@
   --dark-slate-blue: #483888;
   --transition: all, cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   --white-opacity-05: rgba(255, 255, 255, 0.5);
+  --gainsboro: #d9d9d9;
+  --gainsboro-opacity-05: rgba(217, 217, 217, 0.5);
+  --gainsboro-opacity-02: rgba(217, 217, 217, 0.2);
 }

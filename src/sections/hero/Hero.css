@@ -1,5 +1,7 @@
 .hero-section {
   position: relative;
+  overflow-y: visible;
+  overflow-x: clip;
   z-index: 1;
 }
 .hero-header {
@@ -56,6 +58,7 @@
 .hero-look-more {
   font-weight: 600;
   text-align: center;
+  color: #fff;
 }
 
 .hero-look-more-arrow {
@@ -64,6 +67,7 @@
   border: none;
   cursor: pointer;
   margin: 0 auto;
+  fill: #fff;
 }
 
 @media screen and (max-width: 719px) {
@@ -213,10 +217,11 @@
   .hero-header-name {
     font-size: 54px;
     background: linear-gradient(
-      175deg,
-      #fafafa 15.51%,
-      rgba(217, 217, 217, 0.6) 42.25%
+      186deg,
+      rgba(250, 250, 250, 0.95) 29.09%,
+      rgba(217, 217, 217, 0.6) 93.05%
     );
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -271,9 +276,9 @@
   .hero-header-name {
     font-size: 74px;
     background: linear-gradient(
-      175deg,
-      rgba(250, 250, 250, 0.95) 15.51%,
-      rgba(217, 217, 217, 0.6) 42.25%
+      186deg,
+      rgba(250, 250, 250, 0.95) 29.09%,
+      rgba(217, 217, 217, 0.6) 93.05%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -329,14 +334,14 @@
   }
 
   .hero-header {
-    margin-bottom: 45px;
+    margin-bottom: 36px;
   }
   .hero-header-name {
     font-size: 124px;
     background: linear-gradient(
-      175deg,
-      rgba(250, 250, 250, 0.95) 15.51%,
-      rgba(217, 217, 217, 0.6) 42.25%
+      186deg,
+      rgba(250, 250, 250, 0.95) 29.09%,
+      rgba(217, 217, 217, 0.6) 93.05%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -381,6 +386,7 @@
 
   .hero-look-more {
     font-size: 36px;
+    margin-bottom: 31px;
   }
 
   .hero-look-more-arrow {

@@ -26,10 +26,12 @@ const validateInput = (
 ) => {
   if (!isValid) {
     validSetter((s) => ({ ...s, [id]: true }));
+    return false;
   } else {
     if (error[id]) {
       validSetter((s) => ({ ...s, [id]: false }));
     }
+    return true;
   }
 };
 
@@ -47,16 +49,25 @@ export default function CollectivelyForm() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    validateInput(testIsValid(value.name), "name", error, setError);
-    validateInput(testIsValid(value.message), "message", error, setError);
+    const isValidName: boolean = validateInput(
+      testIsValid(value.name),
+      "name",
+      error,
+      setError
+    );
+    const isValidMessage: boolean = validateInput(
+      testIsValid(value.message),
+      "message",
+      error,
+      setError
+    );
 
-    // result
-
-    // const mailtoLink = `mailto:${"semenenkoalex688@gmail.com"}?subject=${encodeURIComponent(
-    //   value.name
-    // )}&body=${encodeURIComponent(value.message)}`;
-
-    // window.open(mailtoLink, "_blank");
+    if (isValidName && isValidMessage) {
+      const mailtoLink = `mailto:${"semenenkoalex688@gmail.com"}?subject=${encodeURIComponent(
+        value.name
+      )}&body=${encodeURIComponent(value.message)}`;
+      window.open(mailtoLink, "_blank");
+    }
   };
 
   const onChange = (

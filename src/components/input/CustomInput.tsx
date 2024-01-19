@@ -18,12 +18,12 @@ interface CustomInputProps {
 }
 const CustomTextField = styled(TextField)({
   "& label": {
-    color: "var(--pink-swan-color)",
+    color: "var(--white-opacity-05)",
     background: "var(--jaguar-color)",
     padding: "0px 2px",
   },
   "& input": {
-    color: "var(--pink-swan-color)",
+    color: "var(--white-opacity-05)",
   },
   "& input.Mui-disabled": {
     color: "var(--charcoal-color)",
@@ -33,7 +33,7 @@ const CustomTextField = styled(TextField)({
     color: "var(--charcoal-color)",
   },
   "& label.Mui-focused": {
-    color: "var(--pink-swan-color)",
+    color: "var(--white-opacity-05)",
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {

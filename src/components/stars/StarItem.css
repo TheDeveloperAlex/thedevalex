@@ -1,0 +1,46 @@
+.star-item {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.star-small {
+  width: 1px;
+  height: 1px;
+}
+
+.star-medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star-big {
+  width: 3px;
+  height: 3px;
+}
+
+.star-large {
+  width: 4px;
+  height: 4px;
+}
+
+.star-animation-short {
+  animation: twinkle 2s infinite;
+}
+
+.star-animation-medium {
+  animation: twinkle 4s infinite;
+}
+
+.star-animation-long {
+  animation: twinkle 10s infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

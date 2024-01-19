@@ -1,5 +1,12 @@
 import React, { RefObject } from "react";
 import { IconArrow } from "../../components/icons";
+import StarsWrapper from "../../components/stars";
+import {
+  starHeroDesktop,
+  starHeroMobile,
+  starHeroMonitor,
+  starHeroTablet,
+} from "./starsHero.data";
 
 import "./Hero.css";
 
@@ -40,6 +47,12 @@ export default function Hero({ refAdvantages }: HeroProps) {
       <button className="hero-look-more-arrow" onClick={scrollToAdvantages}>
         <IconArrow />
       </button>
+      <StarsWrapper
+        mobile={starHeroMobile}
+        tablet={starHeroTablet}
+        desktop={starHeroDesktop}
+        monitor={starHeroMonitor}
+      />
     </article>
   );
 }

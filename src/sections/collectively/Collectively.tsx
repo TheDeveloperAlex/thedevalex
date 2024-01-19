@@ -1,11 +1,25 @@
 import React from "react";
+
+import StarsWrapper from "../../components/stars";
 import CollectivelyForm from "./CollectivelyForm";
+import {
+  starCollectivelyDesktop,
+  starCollectivelyMobile,
+  starCollectivelyMonitor,
+  starCollectivelyTablet,
+} from "./collectivelyStars.data";
 
 import "./Collectively.css";
 
 export default function Collectively() {
   return (
     <article className="container collectively-section" id={"collectively"}>
+      <StarsWrapper
+        mobile={starCollectivelyMobile}
+        tablet={starCollectivelyTablet}
+        desktop={starCollectivelyDesktop}
+        monitor={starCollectivelyMonitor}
+      />
       <img
         src={"/photo.jpg"}
         alt={"Alex Semenenko"}
