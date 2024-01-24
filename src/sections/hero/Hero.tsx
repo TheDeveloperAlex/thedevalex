@@ -30,8 +30,8 @@ export default function Hero({ refAdvantages }: HeroProps) {
         <p className="hero-header-name">ALEX SEMENENKO</p>
         <p className="hero-header-fullstack">
           <span>FULLSTACK </span>
-          <span className="hero-header-developer">
-            DEVELOPER
+          <span className="hero-header-developer-wrapper">
+            <span className="hero-header-developer">DEVELOPER</span>
             <span className="hero-header-developer-span hero-header-developer-span-top-left"></span>
             <span className="hero-header-developer-span hero-header-developer-span-top-right"></span>
             <span className="hero-header-developer-span hero-header-developer-span-bottom-right"></span>

@@ -10,15 +10,11 @@ export default function Header() {
     <header className="container header-section">
       <div className="header-section-name-wrapper">
         <Avatar
-          alt="Alex Semenenko"
-          // src="/static/images/avatar/1.jpg"
           className="header-avatar"
           sx={{
             bgcolor: "purple",
           }}
-        >
-          AS
-        </Avatar>
+        ></Avatar>
         <p className="header-phone">+420-735-907-628</p>
       </div>
       <CustomButton href="#contactMe" className={"header-section-button"}>
