@@ -35,6 +35,11 @@
   position: absolute;
 }
 
+.myProjects-section-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 719px) {
   .myProjects-section {
     padding-top: 108px;
@@ -62,6 +67,7 @@
   .myProjects-section-header {
     margin-bottom: 32px;
   }
+
   .pseudo-element-myProjects-circle-top {
     top: -78px;
     right: -54px;
@@ -88,10 +94,16 @@
   }
 
   .myProjects-section-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    row-gap: 44px;
     column-gap: 20px;
-    row-gap: 60px;
+  }
+
+  .myProjects-section-list-item:nth-child(2n + 1) {
+    position: relative;
+  }
+  .myProjects-section-list-item:nth-child(2n) {
+    position: relative;
+    top: 30%;
   }
 
   .pseudo-element-myProjects-circle-top {
@@ -130,10 +142,8 @@
   }
 
   .myProjects-section-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 28px;
     row-gap: 48px;
+    column-gap: 28px;
   }
 
   .pseudo-element-myProjects-circle-top {
@@ -155,5 +165,13 @@
     height: 626px;
     border-radius: 626px;
     filter: blur(374.75px);
+  }
+
+  .myProjects-section-list-item:nth-child(2n + 1) {
+    position: relative;
+  }
+  .myProjects-section-list-item:nth-child(2n) {
+    position: relative;
+    top: 285px;
   }
 }

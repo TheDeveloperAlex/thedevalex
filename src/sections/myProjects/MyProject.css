@@ -5,7 +5,34 @@
   align-items: center;
   border-radius: 12px;
   border: 1px solid var(--charcoal-color);
+}
+
+.myProjects-section-list-item:nth-child(1) {
   background: linear-gradient(234deg, #302648 1.16%, rgba(42, 35, 60, 0) 100%);
+}
+.myProjects-section-list-item:nth-child(2) {
+  background: linear-gradient(
+    230deg,
+    #302648 3.96%,
+    rgba(42, 35, 60, 0) 99.85%
+  );
+}
+.myProjects-section-list-item:nth-child(3) {
+  background: linear-gradient(33deg, #2a233c 7.44%, #18171c 87.54%);
+}
+.myProjects-section-list-item:nth-child(4) {
+  background: linear-gradient(64deg, #2a233c 1.07%, rgba(42, 35, 60, 0) 36.36%);
+}
+
+.myProjects-section-list-item-img-wrapper-inProgress {
+  min-width: 100%;
+
+  background: radial-gradient(var(--jaguar-color), white);
+  border-radius: 16px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .myProjects-section-list-item-img-wrapper {
@@ -66,13 +93,17 @@
   + p
   + h3
   + .myProjects-section-list-item-img-wrapper
+  > .myProjects-section-list-item-overlay,
+.myProjects-section-list-item-button:focus
+  + p
+  + h3
+  + .myProjects-section-list-item-img-wrapper
   > .myProjects-section-list-item-overlay {
   opacity: 1;
 }
 
-button.myProjects-section-list-item-button,
-a.myProjects-section-list-item-button {
-  margin-top: auto;
+.myProjects-section-list-item-button {
+  width: 50%;
 }
 
 @media screen and (max-width: 719px) {
@@ -117,16 +148,7 @@ a.myProjects-section-list-item-button {
 
 @media screen and (min-width: 1024px) and (max-width: 1919px) {
   .myProjects-section-list-item {
-    height: 552px;
     padding: 20px 20px 24px 20px;
-  }
-
-  .myProjects-section-list-item:nth-child(2) {
-    margin-top: 215px;
-  }
-
-  .myProjects-section-list-item:not(:nth-child(2n), :first-child) {
-    margin-top: -215px;
   }
   .myProjects-section-list-item-overlay {
     font-size: 24px;
@@ -139,7 +161,8 @@ a.myProjects-section-list-item-button {
   }
   .myProjects-section-list-item-content {
     margin-bottom: 24px;
-    padding: 0 20px;
+    max-width: 490px;
+    margin: 0 0 24px 0;
   }
 }
 
@@ -152,24 +175,9 @@ a.myProjects-section-list-item-button {
   }
 }
 
-@media screen and (min-width: 1600px) and (max-width: 1919px) {
-  .myProjects-section-list-item {
-    height: 630px;
-  }
-}
-
 @media screen and (min-width: 1920px) {
   .myProjects-section-list-item {
     padding: 32px 32px 44px 32px;
-    height: 700px;
-  }
-
-  .myProjects-section-list-item:nth-child(2) {
-    margin-top: 285px;
-  }
-
-  .myProjects-section-list-item:not(:nth-child(2n), :first-child) {
-    margin-top: -285px;
   }
 
   .myProjects-section-list-item-img-wrapper {

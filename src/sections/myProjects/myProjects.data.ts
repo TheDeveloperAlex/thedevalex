@@ -22,11 +22,11 @@ export const projects: project[] = [
     image: "/taskManager.png",
     href: "https://thedeveloperalex-task-manager.netlify.app/login",
   },
-  {
-    header: "Task manager-1",
-    content:
-      "Quit smoking app with authorization, profile creation, habit addition, and tracking",
-    image: "/taskManager.png",
-    href: "",
-  },
+  // {
+  //   header: "Film library",
+  //   content: "",
+  //   image: "/taskManager.png",
+  //   href: "",
+  //   inProgress: true,
+  // },
 ];

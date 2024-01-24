@@ -3,4 +3,5 @@ export interface project {
   content: string;
   image: string;
   href: string;
+  inProgress?: boolean;
 }
