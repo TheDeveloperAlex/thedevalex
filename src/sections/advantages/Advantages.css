@@ -23,10 +23,12 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  color: var(--white-smoke-color);
 }
 
 .advantages-list-item-content {
   line-height: 140%;
+  color: var(--white-smoke-color);
 }
 
 .advantages-list-item-content > span {

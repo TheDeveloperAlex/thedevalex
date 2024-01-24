@@ -11,6 +11,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   className?: string;
   href?: string;
+  disabled?: boolean;
 }
 
 const ColorButton = styled(Button)(({ theme }) => ({
@@ -30,6 +31,9 @@ const ColorButton = styled(Button)(({ theme }) => ({
     borderColor: "var(--white-smoke-color)",
     color: "var(--white-smoke-color)",
   },
+  "&:disabled": {
+    backgroundColor: "red",
+  },
 }));
 
 export default function CustomButton({
@@ -38,6 +42,7 @@ export default function CustomButton({
   type = "button",
   className,
   href,
+  disabled,
 }: ButtonProps) {
   return (
     <ColorButton
@@ -46,6 +51,7 @@ export default function CustomButton({
       type={type}
       className={`button ${className}`}
       href={href}
+      disabled={disabled}
     >
       {children}
     </ColorButton>

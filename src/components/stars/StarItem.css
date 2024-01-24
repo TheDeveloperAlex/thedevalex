@@ -1,6 +1,7 @@
 .star-item {
   position: absolute;
   border-radius: 50%;
+  filter: blur(0.75px);
 }
 
 .star-small {
@@ -24,15 +25,15 @@
 }
 
 .star-animation-short {
-  animation: twinkle 2s infinite;
+  animation: twinkle 2s infinite linear;
 }
 
 .star-animation-medium {
-  animation: twinkle 4s infinite;
+  animation: twinkle 7s infinite;
 }
 
 .star-animation-long {
-  animation: twinkle 10s infinite;
+  animation: twinkle 9s infinite;
 }
 
 @keyframes twinkle {

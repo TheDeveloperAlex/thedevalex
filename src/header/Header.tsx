@@ -21,7 +21,7 @@ export default function Header() {
         </Avatar>
         <p className="header-phone">+420-735-907-628</p>
       </div>
-      <CustomButton href="#collectively" className={"header-section-button"}>
+      <CustomButton href="#contactMe" className={"header-section-button"}>
         Contact me
       </CustomButton>
     </header>

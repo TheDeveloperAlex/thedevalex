@@ -13,7 +13,7 @@ import "./Collectively.css";
 
 export default function Collectively() {
   return (
-    <article className="container collectively-section" id={"collectively"}>
+    <article className="container collectively-section" id={"contactMe"}>
       <StarsWrapper
         mobile={starCollectivelyMobile}
         tablet={starCollectivelyTablet}
