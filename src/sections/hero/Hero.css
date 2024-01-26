@@ -35,7 +35,7 @@
 .hero-header-developer {
   overflow: hidden;
   position: relative;
-  display: inline-block;
+  display: block;
 
   background: linear-gradient(
     180deg,
@@ -111,10 +111,10 @@
 
   .hero-header-developer:before {
     border: 5px dashed #fdfdfe;
-    top: -4px;
-    bottom: -4px;
-    left: -4px;
-    right: -4px;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
   }
 
   .hero-header-developer {
@@ -145,12 +145,12 @@
   }
 
   .hero-header-developer-span-bottom-right {
-    bottom: 6px;
+    bottom: -4px;
     right: -4px;
   }
 
   .hero-header-developer-span-bottom-left {
-    bottom: 6px;
+    bottom: -4px;
     left: -4px;
   }
 
@@ -224,10 +224,10 @@
 
   .hero-header-developer:before {
     border: 8px dashed #fdfdfe;
-    top: -7px;
-    bottom: -7px;
-    left: -7px;
-    right: -7px;
+    top: -6px;
+    bottom: -6px;
+    left: -6px;
+    right: -6px;
   }
 
   .hero-header-developer-span {
@@ -245,12 +245,12 @@
   }
 
   .hero-header-developer-span-bottom-right {
-    bottom: 7px;
+    bottom: -5px;
     right: -5px;
   }
 
   .hero-header-developer-span-bottom-left {
-    bottom: 7px;
+    bottom: -5px;
     left: -5px;
   }
 }
@@ -346,10 +346,10 @@
 
   .hero-header-developer:before {
     border: 7px dashed #fdfdfe;
-    top: -6px;
-    bottom: -6px;
-    left: -6px;
-    right: -6px;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
   }
 
   .hero-header-developer-span {
@@ -429,10 +429,10 @@
 
   .hero-header-developer:before {
     border: 14px dashed #fdfdfe;
-    top: -12px;
-    bottom: -12px;
-    left: -12px;
-    right: -12px;
+    top: -11px;
+    bottom: -11px;
+    left: -11px;
+    right: -11px;
   }
 
   .hero-header-developer-span {

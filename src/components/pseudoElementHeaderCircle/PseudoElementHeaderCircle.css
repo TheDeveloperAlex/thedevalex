@@ -1,30 +1,52 @@
+.pseudo-element-header-circle-wrapper {
+  width: 100%;
+  /* height: 0px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: visible;
+  overflow-x: clip;
+}
+
 .pseudo-element-header-circle {
   position: absolute;
 
-  background: var(--light-slate-blue);
+  background-color: var(--light-slate-blue);
 }
 
 @media screen and (max-width: 719px) {
   .pseudo-element-header-circle {
+    width: 528px;
     height: 404px;
     top: -298px;
-    filter: blur(198px);
     border-radius: 528px;
+    filter: blur(2.8rem);
+    opacity: 0.5;
+    -moz-filter: blur(2.8rem);
+    -webkit-filter: blur(2.8rem);
+    -o-filter: blur(2.8rem);
   }
 }
 
 @media screen and (min-width: 720px) and (max-width: 1023px) {
   .pseudo-element-header-circle {
+    width: 876px;
     height: 670px;
     top: -512px;
-    filter: blur(221.85000610351562px);
     border-radius: 876px;
+
+    filter: blur(2.8rem);
+    opacity: 0.5;
+    -moz-filter: blur(2.8rem);
+    -webkit-filter: blur(2.8rem);
+    -o-filter: blur(2.8rem);
   }
 }
 
 @media screen and (max-width: 1023px) {
   .pseudo-element-header-circle {
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
@@ -40,9 +62,12 @@
     top: -541px;
     width: 900px;
     height: 684px;
-
     border-radius: 900px;
+
     filter: blur(333px);
+    -moz-filter: blur(333px);
+    -webkit-filter: blur(333px);
+    -o-filter: blur(333px);
   }
 }
 
@@ -52,6 +77,10 @@
     width: 1272px;
     height: 1013px;
     border-radius: 1272px;
+
     filter: blur(478px);
+    -moz-filter: blur(478px);
+    -webkit-filter: blur(478px);
+    -o-filter: blur(478px);
   }
 }
