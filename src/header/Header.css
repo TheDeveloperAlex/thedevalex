@@ -35,7 +35,7 @@
 
 @media screen and (min-width: 720px) {
   .header-section {
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   div.header-avatar {
     width: 32px;

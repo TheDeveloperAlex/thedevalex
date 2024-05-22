@@ -31,7 +31,7 @@ export default function Footer() {
           }}
           className={"footer-divider"}
         />
-        <ul className="footer-list">
+        {/* <ul className="footer-list">
           {socials.map(({ name, link, image }) => {
             return (
               <li key={name}>
@@ -46,7 +46,7 @@ export default function Footer() {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
       <div className="pseudo-element-myProjects-circle"></div>
     </footer>

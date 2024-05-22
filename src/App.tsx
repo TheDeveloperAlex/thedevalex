@@ -17,7 +17,7 @@ function App() {
       <main>
         <Hero refAdvantages={refAdvantages} />
         <Advantages refAdvantages={refAdvantages} />
-        <MyProjects />
+        {/* <MyProjects /> */}
         <Collectively />
       </main>
       <Footer />

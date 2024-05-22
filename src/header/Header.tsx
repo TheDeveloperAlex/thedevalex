@@ -8,7 +8,7 @@ import "./Header.css";
 export default function Header() {
   return (
     <header className="container header-section">
-      <div className="header-section-name-wrapper">
+      {/* <div className="header-section-name-wrapper">
         <Avatar
           className="header-avatar"
           sx={{
@@ -16,7 +16,7 @@ export default function Header() {
           }}
         ></Avatar>
         <p className="header-phone">+420-735-907-628</p>
-      </div>
+      </div> */}
       <CustomButton href="#contactMe" className={"header-section-button"}>
         Contact me
       </CustomButton>
