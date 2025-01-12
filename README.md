@@ -1,3 +1,3 @@
-# thedevalex
-
-the dev alex landing
+# Developer Alex CV
+## Info:
+- Written on astro
