@@ -1,8 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import CardIcon from "../components/CardIcon.astro";
+import CardExpirience from "../components/cards/CardExpirience.astro";
+import CardInfo from "../components/cards/CardInfo.astro";
+import CardPortfolio from "../components/cards/CardPortfolio.astro";
+import TechStack from "../components/cards/TechStack.astro";
+import CardTabs from "../components/CardTabs.astro";
+import Layout from "../layouts/Layout.astro";
 
+const socilaLinks = [
+  {
+    id: "github",
+    link: "https://github.com/TheDeveloperAlex",
+    className: "github-card",
+  },
+  {
+    id: "mail",
+    link: "mailto:thedevalex6@gmail.com",
+    className: "mail-card",
+  },
+  {
+    id: "telegram",
+    link: "https://t.me/alex_the_classic",
+    className: "telegram-card",
+  },
+  {
+    id: "linkedin",
+    link: "https://www.linkedin.com/in/oleksandr-semenenko-b9704421b/",
+    className: "linkedin-card",
+  },
+];
 ---
 
 <Layout>
-	<div>TEST</div>
+  <CardTabs />
+  <div id="cards-layout" class="all-layout">
+    <CardPortfolio />
+    <CardInfo />
+    {socilaLinks.map((icon) => <CardIcon {...icon} />)}
+    <CardExpirience />
+    <TechStack />
+  </div>
 </Layout>

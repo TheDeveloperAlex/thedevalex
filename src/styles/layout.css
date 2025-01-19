@@ -1,0 +1,155 @@
+/* All */
+.all-layout {
+    display: grid;
+    padding: 24px;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.all-layout>div {
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 799px) {
+    .all-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .all-layout .card-portfolio {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .all-layout .card-info {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .all-layout .card-experience {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .all-layout .card-tech-stack {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px) {
+    .all-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .all-layout .card-portfolio {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .all-layout .mail-card {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .all-layout .linkedin-card {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .all-layout .card-info {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .all-layout .github-card {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .all-layout .telegram-card {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .all-layout .card-experience {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 7;
+    }
+
+    .all-layout .card-tech-stack {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .all-layout {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .all-layout .card-info {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .all-layout .card-portfolio {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .all-layout .card-tech-stack {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .all-layout .linkedin-card {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .all-layout .mail-card {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .all-layout .github-card {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    .all-layout .telegram-card {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    .all-layout .card-experience {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 7;
+    }
+}

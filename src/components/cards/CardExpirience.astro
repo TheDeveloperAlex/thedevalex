@@ -1,0 +1,169 @@
+---
+const data = [
+  {
+    company: "Solara6",
+    position: "Software Engineer",
+    time: "2025 - Present",
+  },
+  { company: "Edgio", position: "Fullstack developer", time: "2024 - 2025" },
+  {
+    company: "Resonance Holding Inc.",
+    position: "Frontend developer",
+    time: "2021 - 2024",
+  },
+];
+---
+
+<div class="card card-experience">
+  <h3 class="heading">
+    <span class="heading-default"> 3 years of </span>
+    <span class="heading-accent">Experience</span>
+  </h3>
+  <ul class="list">
+    {
+      data.map(({ company, position, time }, i) => (
+        <li class="list-item">
+          <p class="date">{time}</p>
+          <h4 class="header">
+            {position}
+            {i === 0 && <span class="accent-icon">⭐</span>}
+          </h4>
+          {/* <p class="company">{company}</p> */}
+          <a href="#" target="_blank" class="company">
+            {company}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .card-experience,
+  .card-experience:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 1.5rem;
+  }
+  .heading-default {
+    /* display: flex;
+    flex-direction: column;
+    gap: 4px; */
+
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    opacity: 0.6;
+  }
+
+  .heading-accent {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+  .list-item {
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: all 0.3s linear;
+  }
+
+  .list-item:hover {
+    /* transform: scale(1.02); */
+    /* box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); */
+  }
+
+  /* .list-item:first-child .date {
+    
+  } */
+  /* .list-item:first-child .header {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    
+  } */
+
+  .accent-icon {
+    font-size: 1rem;
+    /* filter: drop-shadow(0 0 4px rgba(0, 123, 255, 0.8)); */
+  }
+
+  .date {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    opacity: 0.65;
+  }
+
+  .company {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    opacity: 0.8;
+    color: var(--card-color);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .list-item:first-child {
+    border-left: 4px solid;
+    border-image: linear-gradient(90deg, #007bff, #00c4ff) 1;
+    padding-left: 12px;
+    /* box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); */
+  }
+
+  .list-item:first-child .date {
+    /* color: var(--icon-hover-color); */
+  }
+
+  .list-item:first-child .header {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--button-active-bg);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* color: var(--icon-hover-color); */
+  }
+
+  .list-item:not(:first-child) {
+    opacity: 0.6;
+    color: #a1a1a6;
+  }
+
+  /* .list-item:not(:first-child) .date {
+    
+  } */
+
+  .list-item:not(:first-child) .header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  /* .list-item:not(:first-child) .company {
+  } */
+
+  /* .header {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .date {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  } */
+
+  /* .list-item-header {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  } */
+</style>

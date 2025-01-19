@@ -1,0 +1,48 @@
+---
+interface Props {
+  link: string;
+  id: string;
+  className: string;
+}
+const { link, id, className } = Astro.props;
+---
+
+<div class={`card card-icon ${className || ""}`}>
+  <a href={link} title={id} class="link" target="_blank">
+    <svg class="icon">
+      <use href={`/icons.svg?v=1#${id}`}></use>
+    </svg>
+  </a>
+</div>
+
+<style>
+  .card-icon {
+    padding: 0px;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    height: 100%;
+  }
+  .icon {
+    color: var(--icon-color);
+    transition: all 0.3s ease;
+  }
+  a:hover .icon {
+    color: var(--icon-hover-color);
+  }
+  @media screen and (max-width: 639px) {
+    .icon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+  @media screen and (min-width: 640px) {
+    .icon {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>

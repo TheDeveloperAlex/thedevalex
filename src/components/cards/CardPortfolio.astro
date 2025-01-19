@@ -1,0 +1,90 @@
+---
+
+---
+
+<div class="card card-portfolio">
+  <div class="animation-wrapper">
+    <div class="animation">
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+    </div>
+    <div class="animation">
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+      <div class="content">
+        Personal Portfolio
+        <div>✦</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-portfolio {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+  }
+  .animation-wrapper {
+    user-select: none;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .animation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* width: 100%; */
+    animation: marquee 20s linear infinite;
+  }
+  .content {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(-100% - 8px));
+    }
+  }
+</style>

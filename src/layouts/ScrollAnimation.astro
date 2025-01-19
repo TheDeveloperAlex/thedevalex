@@ -1,0 +1,42 @@
+---
+const { stopByHover } = Astro.props;
+const updatedClassName =
+  `scroll-animation-wrapper ${stopByHover ? "scroll-animation-wrapper-hover" : ""}`.trim();
+---
+
+<div class={updatedClassName}>
+  <slot />
+</div>
+
+<style>
+  .scroll-animation-wrapper {
+    position: relative;
+    display: flex;
+    user-select: none;
+    width: calc(100% + 48px);
+    overflow-x: hidden;
+    gap: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: -24px;
+  }
+
+  :global(.scroll-animation-wrapper > div) {
+    display: flex;
+    gap: 24px;
+    animation: marquee 20s linear infinite;
+  }
+
+  :global(.scroll-animation-wrapper-hover:hover > div) {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(-100% - 24px));
+    }
+  }
+</style>
