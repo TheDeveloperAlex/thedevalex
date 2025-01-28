@@ -35,6 +35,11 @@
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
+    .all-layout .tech-stack-list {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 999px) {
@@ -87,6 +92,11 @@
     }
 
     .all-layout .card-tech-stack {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .all-layout .tech-stack-list {
         grid-column-start: 1;
         grid-column-end: 5;
     }
@@ -151,5 +161,10 @@
         grid-column-end: 5;
         grid-row-start: 3;
         grid-row-end: 7;
+    }
+
+    .all-layout .tech-stack-list {
+        grid-column-start: 1;
+        grid-column-end: 6;
     }
 }

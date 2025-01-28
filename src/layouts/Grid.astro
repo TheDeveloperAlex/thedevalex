@@ -1,21 +1,33 @@
 ---
+let currentLayout = "all-layout";
 const buttons = [
-  { id: "all-layout", content: "All" },
-  { id: "about-layout", content: "About" },
-  { id: "work-layout", content: "Work" },
+  { id: "all-layout", content: "All", className: "active" },
+  { id: "about-layout", content: "About", className: "" },
+  { id: "work-layout", content: "Work", className: "" },
 ];
+
+// const
 ---
 
-<div class="card card-tabs">
-  {
-    buttons.map(({ id, content }) => {
-      return (
-        <button id={id} data-cards-layout-button class="button">
-          {content}
-        </button>
-      );
-    })
-  }
+<div>
+  <div class="card card-tabs">
+    {
+      buttons.map(({ id, content, className }) => {
+        return (
+          <button
+            id={id}
+            data-cards-layout-button
+            class={`button ${className}`}
+          >
+            {content}
+          </button>
+        );
+      })
+    }
+  </div>
+  <div id="cards-layout" class={currentLayout}>
+    <slot />
+  </div>
 </div>
 
 <style>

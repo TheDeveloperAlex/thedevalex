@@ -3,8 +3,9 @@ import CardIcon from "../components/CardIcon.astro";
 import CardExpirience from "../components/cards/CardExpirience.astro";
 import CardInfo from "../components/cards/CardInfo.astro";
 import CardPortfolio from "../components/cards/CardPortfolio.astro";
+import CardTechStackList from "../components/cards/CardTechStackList.astro";
 import TechStack from "../components/cards/TechStack.astro";
-import CardTabs from "../components/CardTabs.astro";
+import Grid from "../layouts/Grid.astro";
 import Layout from "../layouts/Layout.astro";
 
 const socilaLinks = [
@@ -32,12 +33,12 @@ const socilaLinks = [
 ---
 
 <Layout>
-  <CardTabs />
-  <div id="cards-layout" class="all-layout">
+  <Grid>
     <CardPortfolio />
     <CardInfo />
     {socilaLinks.map((icon) => <CardIcon {...icon} />)}
     <CardExpirience />
     <TechStack />
-  </div>
+    <CardTechStackList />
+  </Grid>
 </Layout>
