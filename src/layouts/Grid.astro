@@ -5,8 +5,6 @@ const buttons = [
   { id: "about-layout", content: "About", className: "" },
   { id: "work-layout", content: "Work", className: "" },
 ];
-
-// const
 ---
 
 <div>
@@ -32,13 +30,14 @@ const buttons = [
 
 <style>
   .card-tabs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
     padding: 8px;
-    margin: 48px auto 48px auto;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 1.5rem;
-    max-width: max-content;
   }
   .button {
     display: flex;
@@ -52,7 +51,9 @@ const buttons = [
     background: var(--button-bg);
     color: var(--button-text);
     border: 1px solid var(--button-border);
+    width: calc(100% / 3 - 7px);
   }
+
   .button:hover {
     background-color: var(--button-hover-bg);
     border: 1px solid var(--button-hover-border);
@@ -62,6 +63,19 @@ const buttons = [
     color: var(--button-active-color);
     border-color: var(--button-active-border);
     box-shadow: var(--button-active-shadow);
+  }
+
+  @media screen and (max-width: 799px) {
+    .card-tabs {
+      margin-top: 24px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .card-tabs {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
   }
 </style>
 
