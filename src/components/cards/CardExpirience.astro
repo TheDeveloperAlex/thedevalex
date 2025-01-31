@@ -28,7 +28,6 @@ const data = [
             {position}
             {i === 0 && <span class="accent-icon">⭐</span>}
           </h4>
-          {/* <p class="company">{company}</p> */}
           <a href="#" target="_blank" class="company">
             {company}
           </a>
@@ -50,10 +49,6 @@ const data = [
     margin-bottom: 1.5rem;
   }
   .heading-default {
-    /* display: flex;
-    flex-direction: column;
-    gap: 4px; */
-
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 500;
@@ -73,23 +68,8 @@ const data = [
     transition: all 0.3s linear;
   }
 
-  .list-item:hover {
-    /* transform: scale(1.02); */
-    /* box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); */
-  }
-
-  /* .list-item:first-child .date {
-    
-  } */
-  /* .list-item:first-child .header {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    
-  } */
-
   .accent-icon {
     font-size: 1rem;
-    /* filter: drop-shadow(0 0 4px rgba(0, 123, 255, 0.8)); */
   }
 
   .date {
@@ -113,11 +93,6 @@ const data = [
     border-left: 4px solid;
     border-image: linear-gradient(90deg, #007bff, #00c4ff) 1;
     padding-left: 12px;
-    /* box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); */
-  }
-
-  .list-item:first-child .date {
-    /* color: var(--icon-hover-color); */
   }
 
   .list-item:first-child .header {
@@ -128,7 +103,6 @@ const data = [
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* color: var(--icon-hover-color); */
   }
 
   .list-item:not(:first-child) {
@@ -136,34 +110,10 @@ const data = [
     color: #a1a1a6;
   }
 
-  /* .list-item:not(:first-child) .date {
-    
-  } */
-
   .list-item:not(:first-child) .header {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 0.5rem;
     font-weight: 400;
   }
-  /* .list-item:not(:first-child) .company {
-  } */
-
-  /* .header {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .date {
-    font-size: 0.75rem;
-    line-height: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-  } */
-
-  /* .list-item-header {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  } */
 </style>

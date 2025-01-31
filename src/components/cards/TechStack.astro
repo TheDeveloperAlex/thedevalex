@@ -1,16 +1,15 @@
 ---
 import ScrollAnimation from "../../layouts/ScrollAnimation.astro";
 const icons = [
-  { src: "/html-icon.svg", alt: "html" },
-  { src: "/css-icon.svg", alt: "css" },
-  { src: "/javascript-icon.svg", alt: "javascript" },
-  { src: "/typescript-icon.svg", alt: "typescript" },
-  { src: "/react-icon.svg", alt: "react" },
-  { src: "/nextjs-icon.svg", alt: "nextjs" },
-  { src: "/remix-icon.svg", alt: "remix" },
-  { src: "/astro-icon.svg", alt: "astro" },
-  { src: "/nodejs-icon.svg", alt: "nodejs" },
-  { src: "/git-icon.svg", alt: "git" },
+  "html",
+  "css",
+  "javascript",
+  "typescript",
+  "react",
+  "nextjs",
+  "remix",
+  "astro",
+  "nodejs",
 ];
 ---
 
@@ -22,7 +21,9 @@ const icons = [
           icons.map((image) => {
             return (
               <div class="icon-wrapper">
-                <img {...image} class="icon" />
+                <svg class="icon">
+                  <use href={`/icons/non-critical-icons.svg?v=1#${image}`} />
+                </svg>
               </div>
             );
           })
@@ -33,7 +34,9 @@ const icons = [
           icons.map((image) => {
             return (
               <div class="icon-wrapper">
-                <img {...image} class="icon" />
+                <svg class="icon">
+                  <use href={`/icons/non-critical-icons.svg?v=1#${image}`} />
+                </svg>
               </div>
             );
           })
@@ -44,72 +47,74 @@ const icons = [
       <h2 class="header">TECH STACK</h2>
       <div class="divider"></div>
       <div class="cog-image-wrapper">
-        <img src="/cog-icon.svg" alt="" class="cog-big" />
-        <img src="/cog-icon.svg" alt="" class="cog-small" />
+        <svg class="cog-big" width="32" height="32">
+          <use href={`/icons/non-critical-icons.svg?v=1#cog`}></use>
+        </svg>
+        <svg class="cog-small" width="16" height="16">
+          <use href={`/icons/non-critical-icons.svg?v=1#cog`}></use>
+        </svg>
       </div>
     </div>
   </div>
+
+  <style>
+    .header-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .divider {
+      width: 1px;
+      margin: 0 8px 0 8px;
+      height: 20px;
+      background-color: grey;
+    }
+    .cog-image-wrapper {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      width: 40px;
+    }
+    .cog-big {
+      animation: rotate 2s linear infinite;
+    }
+    .cog-small {
+      margin-left: auto;
+      width: 16px;
+      height: auto;
+      animation: rotate 2s linear infinite reverse;
+      margin-top: -6px;
+    }
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 1rem;
+      transition: all 0.3s linear;
+      background-color: #1a1b20;
+      border: 1px solid #2b2c33;
+    }
+
+    .icon-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </div>
-
-<style>
-  .header-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .divider {
-    width: 1px;
-    margin: 0 8px 0 8px;
-    height: 20px;
-    background-color: grey;
-  }
-  .cog-image-wrapper {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    width: 40px;
-  }
-  .cog-big {
-    width: 32px;
-    height: auto;
-    animation: rotate 2s linear infinite;
-  }
-  .cog-small {
-    margin-left: auto;
-    width: 16px;
-    height: auto;
-    animation: rotate 2s linear infinite reverse;
-    margin-top: -6px;
-  }
-
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    border-radius: 1rem;
-    transition: all 0.3s linear;
-    background-color: #1a1b20;
-    border: 1px solid #2b2c33;
-  }
-
-  .icon-wrapper:hover {
-    transform: scale(1.05);
-  }
-
-  .icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-</style>
