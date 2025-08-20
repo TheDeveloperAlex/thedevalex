@@ -1,0 +1,111 @@
+---
+import Ticker from "../../../ui/Ticker.astro";
+// import SA from "../SA.astro";
+// import Animation1 from "../Animation1.astro";
+const icons = [
+  "html",
+  "css",
+  "javascript",
+  "typescript",
+  "react",
+  "nextjs",
+  "remix",
+  "astro",
+  "nodejs",
+];
+---
+
+<div class="card card-tech-stack">
+  <div>
+    <div>
+      <Ticker pauseOnHover>
+        {
+          icons.map((image) => {
+            return (
+              <div class="icon-wrapper">
+                <svg class="icon">
+                  <use href={`/icons/non-critical-icons.svg?v=1#${image}`} />
+                </svg>
+              </div>
+            );
+          })
+        }
+      </Ticker>
+      <div>
+        <div class="header-wrapper">
+          <h2 class="header">TECH STACK</h2>
+          <div class="divider"></div>
+          <div class="cog-image-wrapper">
+            <svg class="cog-big" width="32" height="32">
+              <use href={`/icons/non-critical-icons.svg?v=1#cog`}></use>
+            </svg>
+            <svg class="cog-small" width="16" height="16">
+              <use href={`/icons/non-critical-icons.svg?v=1#cog`}></use>
+            </svg>
+          </div>
+        </div>
+
+        <style>
+          .header-wrapper {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+          }
+
+          .divider {
+            width: 1px;
+            margin: 0 8px 0 8px;
+            height: 20px;
+            background-color: grey;
+          }
+          .cog-image-wrapper {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            width: 40px;
+          }
+          .cog-big {
+            animation: rotate 2s linear infinite;
+          }
+          .cog-small {
+            margin-left: auto;
+            width: 16px;
+            height: auto;
+            animation: rotate 2s linear infinite reverse;
+            margin-top: -6px;
+          }
+
+          .icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 1rem;
+            transition: all 0.3s linear;
+            background-color: #1a1b20;
+            border: 1px solid #2b2c33;
+          }
+
+          .icon-wrapper:hover {
+            transform: scale(1.05);
+          }
+
+          .icon {
+            width: 48px;
+            height: 48px;
+          }
+
+          @keyframes rotate {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        </style>
+      </div>
+    </div>
+  </div>
+</div>

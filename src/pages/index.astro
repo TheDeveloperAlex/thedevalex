@@ -1,44 +1,21 @@
 ---
-import CardIcon from "../components/CardIcon.astro";
-import CardExpirience from "../components/cards/CardExpirience.astro";
-import CardInfo from "../components/cards/CardInfo.astro";
-import CardPortfolio from "../components/cards/CardPortfolio.astro";
-import CardTechStackList from "../components/cards/CardTechStackList.astro";
-import TechStack from "../components/cards/TechStack.astro";
-import Grid from "../layouts/Grid.astro";
+import CardExpirience from "../components/widgets/templates/cards/CardExpirience.astro";
+import CardInfo from "../components/widgets/templates/cards/CardInfo.astro";
+import CardPortfolio from "../components/widgets/templates/cards/CardPortfolio.astro";
+import CardTechStackList from "../components/widgets/templates/cards/CardTechStackList.astro";
+import TechStack from "../components/widgets/templates/cards/TechStack.astro";
+import CardsSocialLinks from "../components/widgets/templates/cards/CardsSocialLinks.astro";
+import TemplateViewController from "../components/widgets/templates/TemplateViewController.astro";
 import Layout from "../layouts/Layout.astro";
-
-const socilaLinks = [
-  {
-    id: "github",
-    link: "https://github.com/TheDeveloperAlex",
-    className: "github-card",
-  },
-  {
-    id: "mail",
-    link: "mailto:thedevalex6@gmail.com",
-    className: "mail-card",
-  },
-  {
-    id: "telegram",
-    link: "https://t.me/alex_the_classic",
-    className: "telegram-card",
-  },
-  {
-    id: "linkedin",
-    link: "https://www.linkedin.com/in/oleksandr-semenenko-b9704421b/",
-    className: "linkedin-card",
-  },
-];
 ---
 
 <Layout>
-  <Grid>
+  <TemplateViewController>
     <CardPortfolio />
     <CardInfo />
-    {socilaLinks.map((icon) => <CardIcon {...icon} />)}
+    <CardsSocialLinks />
     <CardExpirience />
     <TechStack />
     <CardTechStackList />
-  </Grid>
+  </TemplateViewController>
 </Layout>

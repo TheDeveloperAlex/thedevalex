@@ -1,0 +1,43 @@
+---
+import Ticker from "../../../ui/Ticker.astro";
+const items = Array.from({ length: 8 }, () => "Personal Portfolio ✦");
+---
+
+<div class="card card-portfolio">
+  <Ticker>
+    {
+      items.map((item) => (
+        <div class="content" aria-hidden="true">
+          {item}
+        </div>
+      ))
+    }
+  </Ticker>
+</div>
+
+<style>
+  .card-portfolio {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+  }
+  .animation-wrapper {
+    user-select: none;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .animation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .content {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+</style>

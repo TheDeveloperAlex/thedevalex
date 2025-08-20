@@ -1,0 +1,28 @@
+---
+import CardIcon from "../../../ui/CardIcon.astro";
+
+const socialLinks = [
+  {
+    id: "github",
+    link: "https://github.com/TheDeveloperAlex",
+    className: "github-card",
+  },
+  {
+    id: "mail",
+    link: "mailto:thedevalex6@gmail.com",
+    className: "mail-card",
+  },
+  {
+    id: "telegram",
+    link: "https://t.me/the_dev_alex",
+    className: "telegram-card",
+  },
+  {
+    id: "linkedin",
+    link: "https://www.linkedin.com/in/oleksandr-semenenko-b9704421b/",
+    className: "linkedin-card",
+  },
+];
+---
+
+<>{socialLinks.map((icon) => <CardIcon {...icon} />)}</>

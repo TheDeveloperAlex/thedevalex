@@ -1,0 +1,77 @@
+---
+import Button from "../../ui/Button.astro";
+
+enum Templates {
+  All = "template-all",
+  Work = "template-work",
+  About = "template-about",
+}
+
+const buttons = [
+  { id: Templates.All, content: "All" },
+  { id: Templates.Work, content: "Work" },
+  { id: Templates.About, content: "About" },
+];
+---
+
+<div class="card button-template-navigation">
+  {
+    buttons.map(({ id, content }) => {
+      return (
+        <Button id={id} data-cards-layout-button>
+          {content}
+        </Button>
+      );
+    })
+  }
+</div>
+
+<style id="button-template-navigation">
+  .button-template-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1.5rem;
+  }
+
+  @media screen and (max-width: 799px) {
+    .button-template-navigation {
+      margin-top: 24px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .button-template-navigation {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+  }
+</style>
+
+<script>
+  const cardsLayout = document.querySelector("#cards-layout");
+  const tabsButtons = document.querySelectorAll("[data-cards-layout-button]");
+  let activeButton: HTMLElement | null = null;
+
+  tabsButtons.forEach((button) => {
+    if (button.id === cardsLayout?.className) {
+      activeButton = button as HTMLElement;
+      button.classList.add("active");
+    }
+
+    button.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (!cardsLayout || !target?.id) return;
+      if (activeButton) {
+        activeButton.classList.remove("active");
+      }
+      target.classList.add("active");
+      activeButton = target;
+      cardsLayout.className = target.id;
+    });
+  });
+</script>

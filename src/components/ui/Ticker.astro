@@ -1,0 +1,74 @@
+---
+export interface Props {
+  duration?: number;
+  gap?: number;
+  pauseOnHover?: boolean;
+}
+
+const { duration = 20, gap = 24, pauseOnHover = false } = Astro.props;
+const hoverClass = pauseOnHover ? "ticker--pause" : "";
+---
+
+<div
+  class={`ticker ${hoverClass}`}
+  style={`--gap:${gap}px; --dur:${duration}s`}
+>
+  <div class="ticker__track">
+    <div class="ticker__lane"><slot /></div>
+    <div class="ticker__lane" aria-hidden="true"><slot /></div>
+  </div>
+</div>
+
+<style>
+  .ticker {
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .ticker__track {
+    display: flex;
+    animation: ticker-move var(--dur) linear infinite;
+    will-change: transform;
+  }
+
+  .ticker--pause:hover .ticker__track {
+    animation-play-state: paused;
+  }
+
+  @supports not (animation-play-state: paused) {
+    .ticker--pause:hover .ticker__track {
+      animation: none;
+    }
+  }
+
+  .ticker__lane {
+    display: flex;
+    flex: none;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: var(--gap);
+  }
+
+  :global(.ticker__lane > *) {
+    margin-right: var(--gap);
+  }
+
+  :global(.ticker__lane > *:last-child) {
+    margin-right: 0;
+  }
+
+  @keyframes ticker-move {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ticker__track {
+      animation: none !important;
+    }
+  }
+</style>

@@ -1,4 +1,6 @@
-@import './layout.css';
+@import './templates/all.css';
+@import './templates/work.css';
+@import './templates/about.css';
 
 * {
     box-sizing: border-box;
