@@ -1,0 +1,36 @@
+---
+import TemplateButtons from "../../features/templates/TemplateButtons.astro";
+---
+
+<div>
+  <TemplateButtons />
+  <div id="cards-layout" class={"template-all"}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .card-tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1.5rem;
+  }
+
+  @media screen and (max-width: 799px) {
+    .card-tabs {
+      margin-top: 24px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .card-tabs {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+  }
+</style>

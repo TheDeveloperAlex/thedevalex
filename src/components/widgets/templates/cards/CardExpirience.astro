@@ -4,12 +4,19 @@ const data = [
     company: "Solara6",
     position: "Software Engineer",
     time: "2025 - Present",
+    link: "https://www.solara6.com/",
   },
-  { company: "Edgio", position: "Fullstack developer", time: "2024 - 2025" },
+  {
+    company: "Edgio",
+    position: "Fullstack developer",
+    time: "2024 - 2025",
+    link: "https://edg.io/",
+  },
   {
     company: "Resonance Holding Inc.",
     position: "Frontend developer",
     time: "2021 - 2024",
+    link: "https://resonance.vision/",
   },
 ];
 ---
@@ -21,14 +28,14 @@ const data = [
   </h3>
   <ul class="list">
     {
-      data.map(({ company, position, time }, i) => (
+      data.map(({ company, position, time, link }, i) => (
         <li class="list-item">
           <p class="date">{time}</p>
           <h4 class="header">
             {position}
             {i === 0 && <span class="accent-icon">⭐</span>}
           </h4>
-          <a href="#" target="_blank" class="company">
+          <a href={link} target="_blank" class="company">
             {company}
           </a>
         </li>
@@ -87,8 +94,14 @@ const data = [
     color: var(--card-color);
     font-weight: 500;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    max-width: max-content;
   }
 
+  .company:hover {
+    transform: scale(1.2);
+  }
   .list-item:first-child {
     border-left: 4px solid;
     border-image: linear-gradient(90deg, #007bff, #00c4ff) 1;
