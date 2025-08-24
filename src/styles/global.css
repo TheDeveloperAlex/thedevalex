@@ -29,24 +29,12 @@
     --button-active-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 
     /* Cards */
-    /* --card-bg: #212329;
-    --card-color: #ffffff;
-    --card-border: #343a40;
-
-    --card-hover-bg: #2b2f38;
-    --card-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
     --card-bg: #1e1f26;
-    /* Тёмно-серый фон с лёгким голубым оттенком */
     --card-hover-bg: #292a31;
-    /* Фон при наведении чуть светлее */
     --card-color: #ffffff;
-    /* Белый текст */
     --card-border: #2c2f36;
-    /* Цвет границы карточек */
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Лёгкая тень */
     --card-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    /* Тень при наведении */
 
     /* Icons */
     --icon-color: #ffffff;
@@ -57,9 +45,6 @@ html,
 body {
     margin: 0;
     width: 100%;
-    /* height: 100%; */
-    /* background-color: black; */
-    /* background-color: #0E0F10; */
     background-color: var(--body-bg);
     color: var(--body-text);
     font-family: 'Roboto', sans-serif;
@@ -84,15 +69,12 @@ p {
     margin-block-end: 0;
 }
 
-
-
 .card {
     background: var(--card-bg);
     color: var(--card-color);
     border: 1px solid var(--card-border);
     border-radius: 16px;
     padding: 24px;
-    /* margin-bottom: 16px; */
     box-shadow: var(--card-shadow);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -101,17 +83,3 @@ p {
     background: var(--card-hover-bg);
     box-shadow: var(--card-hover-shadow);
 }
-
-.layout {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh; */
-}
-
-/* @media screen and (max-width: 768px) {
-    .layout {
-        max-width: ;
-    }
-    
-} */
